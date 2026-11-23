@@ -95,5 +95,5 @@ node /tmp/inject-nav.mjs --dir ./dist --home https://signalsubstrate.github.io/
 
 ## GitHub Pages Deployment
 
-1. Confirm `site` in `astro.config.mjs` matches `https://signalsubstrate.github.io` (or your GitHub Pages domain).
+1. Confirm `site` in `astro.config.mjs` matches `https://signalsubstrate.github.io`.
 2. Enable **Settings → Pages → Source: GitHub Actions** in your repository. Pushing to `main` triggers `.github/workflows/deploy.yml` automatically.
