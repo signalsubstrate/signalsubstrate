@@ -1,0 +1,6 @@
+{
+  "name": "Signal & Substrate",
+  "description": "Minimalist technical publication and interactive explainers on AI safety, machine learning, and data engineering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

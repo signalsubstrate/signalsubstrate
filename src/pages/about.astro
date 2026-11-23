@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About"
+  description="Editorial scope, interactive explainers, and technical notes behind Signal & Substrate."
+>
+  <section class="about-page">
+    <nav class="back-nav mono" aria-label="Return to index">
+      <a href="/" class="back-link">← Index</a>
+    </nav>
+
+    <header class="page-header">
+      <div class="page-meta mono">colophon &amp; scope</div>
+      <h1 class="page-title">About Signal &amp; Substrate</h1>
+    </header>
+
+    <div class="prose">
+      <p>
+        <strong>Signal &amp; Substrate</strong> is an independent technical notebook
+        focused on the intersection of AI safety, machine learning mechanics, and
+        the data engineering systems that sustain both.
+      </p>
+
+      <h2>Editorial Scope</h2>
+      <ul>
+        <li>
+          <strong>AI Safety</strong> — Mechanistic interpretability, representation
+          monitoring, linear probes, and evaluation failure modes under distribution
+          shift.
+        </li>
+        <li>
+          <strong>Machine Learning</strong> — Optimization dynamics, sampling
+          geometry, quantization tradeoffs, and empirical ablations stripped of
+          marketing noise.
+        </li>
+        <li>
+          <strong>Data Engineering</strong> — Deterministic backfills, storage
+          layouts, watermark contracts, and pipeline invariants that survive
+          schema evolution.
+        </li>
+      </ul>
+
+      <h2>Interactive Explainers</h2>
+      <p>
+        Entries marked <span class="mono">[interactive]</span> in the index open
+        self-contained browser simulations built with vanilla HTML, CSS, and
+        JavaScript. Each interactive piece lives outside the main Markdown
+        pipeline so numerical experiments can run directly in the browser without
+        bundle bloat.
+      </p>
+
+      <h2>Format &amp; Colophon</h2>
+      <p>
+        Built statically with Astro Content Collections and plain scoped CSS. Zero
+        third-party UI frameworks, zero client-side analytics, and zero decorative
+        images. Subscribe via <a href="/rss.xml">RSS</a> or inspect the static
+        source on
+        <a
+          href="https://github.com/signalsubstrate"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .back-nav {
+    margin-bottom: 1.75rem;
+    font-size: var(--text-meta);
+  }
+
+  .back-link {
+    color: var(--text-secondary);
+    display: inline-block;
+    padding: 0.25rem 0;
+  }
+
+  .back-link:hover {
+    color: var(--accent-link);
+  }
+
+  .page-header {
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-hairline);
+  }
+
+  .page-meta {
+    font-size: var(--text-meta);
+    color: var(--text-tertiary);
+    margin-bottom: 0.5rem;
+  }
+
+  .page-title {
+    margin: 0;
+    font-size: var(--text-article-title);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    text-wrap: balance;
+  }
+</style>
